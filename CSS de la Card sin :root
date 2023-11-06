@@ -1,0 +1,11 @@
+ table{
+    border-color:rgb(43, 70, 226);
+    background-color: rgb(27, 87, 87);
+    color:antiquewhite;
+}
+
+table a{
+    text-decoration: none;
+    color:rgb(236, 15, 15);
+    font-style:italic;
+} 
