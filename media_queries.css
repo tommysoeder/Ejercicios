@@ -1,0 +1,54 @@
+*{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 3,1fr;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 8px;
+    width: fit-content;
+    margin: 3px;
+}
+
+div img{
+    border-radius: 15px;
+}
+
+.cromo1{
+    background-color: rgb(14, 14, 88);
+    color: rgb(201, 144, 45);
+    border-radius: 20px;
+}
+
+.cromo2{
+    background-color: rgb(235, 235, 243);
+    color: rgb(71, 45, 201);
+    border-radius: 20px;
+}
+
+.cromo3{
+    background-color: rgb(164, 22, 29);
+    color: white;
+    border-radius: 20px;
+}
+
+/* Móvil */
+
+@media (max-width: 768px){
+    div{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 375px){
+    div{
+        display: grid;
+        grid-template-columns: min-content;    
+    }
+}
