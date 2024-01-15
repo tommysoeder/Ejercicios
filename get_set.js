@@ -3,30 +3,43 @@
 
 class Person {
     constructor(firstName,lastName,age){
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.age=age;
+        this._firstName=firstName
+        this._lastName=lastName
+        this._age=age
     }
+
     get firstName(){
-        return this.firstName
+        return this._firstName
     }
+
     get lastName(){
-        return this.lastName
+        return this._lastName
     }
-    set newName(nuevoNombre){
-        this.firstName=nuevoNombre
+
+    get age(){
+        return this._age
     }
-    set newSurname(nuevoApe){
-        this.lastName=nuevoApe
-    }
+
     get fullName(){
-        return this.firstName + " " + this.lastName
+        return this._firstName + this._lastName
     }
+
+    set firstName(newName){
+        this._firstName=newName
     }
-    
-    const person = new Person('Mario', 'Rossi', 25);
-    console.log(person.fullName);
-    
-    person.firstName = 'Maria';
-    person.lastName = 'Verdi';
-    console.log(person.fullName);
+
+    set lastName(newLastName){
+        this._lastName=newLastName
+    }
+
+    set age(newEdad){
+        this._age=newEdad
+    }
+}
+
+const person = new Person('Mario', 'Rossi', 25);
+console.log(person.fullName);
+
+person.firstName = 'Maria';
+person.lastName = 'Verdi';
+console.log(person.fullName);
