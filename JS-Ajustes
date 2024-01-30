@@ -1,0 +1,47 @@
+/* Ajustes INICIO */
+const boton__ajustes = document.querySelector('.boton__ajustes');
+const ajustes = document.querySelector('.capa__ajustes');
+boton__ajustes.addEventListener('click', () => {
+  
+  if (ajustes.style.display === 'none') {
+    ajustes.style.display = 'block';
+  } else {
+    
+    ajustes.style.display = 'none';
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const closeButton = document.querySelector(".close-button");
+    const capaAjustes = document.querySelector(".capa__ajustes");
+    closeButton.addEventListener("click", function() {
+      capaAjustes.style.display = "none";
+    });
+    capaAjustes.addEventListener("click", function (event) {
+        if (event.target === capaAjustes) {
+            
+            capaAjustes.style.display = "none";
+        }
+    });
+  });
+
+  function toggleBorder(element) {
+   
+    document.querySelectorAll('.light-mode-img, .dark-mode-img').forEach(img => {
+        img.classList.remove('selected');
+    });
+
+    
+    element.classList.add('selected');
+}
+
+function toggleBorderFin(element) {
+
+    document.querySelectorAll(".nav1-img, .nav2-img, .nav3-img, .nav4-img").forEach(img => {
+        img.classList.remove('selected');
+    });
+
+    element.classList.add('selected');
+}
+
+/* Ajustes FIN */
