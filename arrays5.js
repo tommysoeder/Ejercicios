@@ -1,5 +1,5 @@
 function sortPeopleByAge(arr) {
-  let sorted = people.sort((a,b)=>a.length-b.length);
+  let sorted = people.sort((a,b)=>a.age-b.age);
   return sorted;
 }
 
